@@ -1,0 +1,11 @@
+version: '3'
+services:
+  grafana:
+    image: grafana/grafana:6.5.0-ubuntu
+    container_name: grafana
+    volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    ports:
+    - 3000:3000
